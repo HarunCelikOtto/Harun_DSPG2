@@ -2,9 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
       "/posts/Week_One/Week_One.html",
-      "/posts/welcome/index.html"
+      "/posts/Week_Two/Week_Two.html"
     ]
   }
 ]
