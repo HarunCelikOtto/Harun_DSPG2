@@ -1,0 +1,43 @@
+---
+title: "Week Four"
+author: "Harun Celik"
+date: "08-06-2023"
+categories: ["Week Four", "Phase Two"]
+---
+
+## DSPG Work
+
+### Weekly Mission
+
+For DSPG this week as the Grocery group, the project lead and I discussed that our focus should be on assigning the interns the taskf of copying the functionality of the excel tools that were supplied to us. The decision was based off of the reasoning that once all of the functions were converted into R functions and documented properly, creating an inventory the data required to automate the processes would be a lot easier. For those purposes, I set up an [R package on GitHub](https://github.com/DSPG-2023/Grocery) for our Grocery project called `DSPGGrocery` so that the interns could start writing out functions and documenting them using `Roxygen2`. The goal in the future is to automate the process of documentation for our package as much as possible using `Roxygen2`, `pkgdown` and `vignettes` in R.
+
+### Objectives
+
+The following are objectives that I aimed to complete for this week of DSPG.
+
+-   [x] Create an R Package to host function conversions to R.
+-   [x] Conduct a workshop to DSPG on function writing and documentation in R.
+-   [x] Render completed team blogs in the overall DSPG Blog.
+-   [x] Assist in the data collection process in Slater, IA for the WinVest project.
+-   [x] Experiment with python code chunks in Quarto blog.
+
+### Additional Work
+
+Beyond the work that I tasked myself with completing is additional work I'm currently doing.
+
+-   Learning to use `sphinx` for automating the process of documenting packages in Python.
+-   Practicing `S4` OOP in R to better understand how R's Class and Method operations work.
+-   Learning `C++` for personal reasons :)
+-   Looking into more Quarto Blog customization!
+
+## Project Overview
+
+*For our team meeting on Friday, I was tasked with writing the Project Overview section and the following is that information.*
+
+Our group's task in the 2023 DSPG program is to develop a tool for the Farm, Food and Enterprise Development ISU Extension (FFED) that can help inform decision making for rural grocery stores. The goal of the project is to help users to make better decisions in opening, inheriting, and operating grocery stores in rural environments. The development of the tool relies heavily on the research conducted by domain experts on rural grocery stores and accessibility to verified data on the topic. Our current workflow moving forward is outlined in the following manner.
+
+![Weekly Project Timeline](images/project_timeline.png)
+
+As we learn more about our data and possibilities for automating processes that our client's initially calculated manually, we update our vision for what our final deliverable for DSPG could be. A draft of our thoughts are depicted as a tool which takes a certain range of user input and automated data, transforms that data through converted functions, and outputs the results in the most accessible format for the user.
+
+![Tool Processes](images/tool_process.png)

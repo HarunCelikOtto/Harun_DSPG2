@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Harun_DSPG2",
     "section": "",
-    "text": "Week One\n\n\n\n\n\n\n\nWeek One\n\n\n\n\n\n\n\n\n\n\n\nMay 31, 2023\n\n\nHarun Celik\n\n\n\n\n\n\n\n\nWeek Two\n\n\n\n\n\n\n\nWeek Two\n\n\n\n\n\n\n\n\n\n\n\nMay 31, 2023\n\n\nHarun Celik\n\n\n\n\n\n\nNo matching items"
+    "text": "Week Four\n\n\n\n\n\n\n\nWeek Four\n\n\nPhase One\n\n\n\n\n\n\n\n\n\n\n\nAug 6, 2023\n\n\nHarun Celik\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek One\n\n\n\n\n\n\n\nWeek One\n\n\n\n\n\n\n\n\n\n\n\nMay 31, 2023\n\n\nHarun Celik\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek Two\n\n\n\n\n\n\n\nWeek Two\n\n\n\n\n\n\n\n\n\n\n\nMay 31, 2023\n\n\nHarun Celik\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/Week_One/Week_One.html",
@@ -26,5 +26,19 @@
     "title": "Week Two",
     "section": "",
     "text": "Introduction\nThis is just a simple hello, but we are in week two!\n\nprint(\"This works\")\n\n[1] \"This works\"\n\n\n\nprint(\"This will not print\")"
+  },
+  {
+    "objectID": "posts/Week-Four/Week-Four.html",
+    "href": "posts/Week-Four/Week-Four.html",
+    "title": "Week Four",
+    "section": "",
+    "text": "For DSPG this week as the Grocery group, the project lead and I discussed that our focus should be on assigning the interns the taskf of copying the functionality of the excel tools that were supplied to us. The decision was based off of the reasoning that once all of the functions were converted into R functions and documented properly, creating an inventory the data required to automate the processes would be a lot easier. For those purposes, I set up an R package on GitHub for our Grocery project called DSPGGrocery so that the interns could start writing out functions and documenting them using Roxygen2. The goal in the future is to automate the process of documentation for our package as much as possible using Roxygen2, pkgdown and vignettes in R.\n\n\n\nThe following are objectives that I aimed to complete for this week of DSPG.\n\nCreate an R Package to host function conversions to R.\nConduct a workshop to DSPG on function writing and documentation in R.\nRender completed team blogs in the overall DSPG Blog.\nAssist in the data collection process in Slater, IA for the WinVest project.\nExperiment with python code chunks in Quarto blog.\n\n\n\n\nBeyond the work that I tasked myself with completing is additional work I’m currently doing.\n\nLearning to use sphinx for automating the process of documenting packages in Python.\nPracticing S4 OOP in R to better understand how R’s Class and Method operations work.\nLearning C++, for personal reasons :)\nLooking into more Quarto Blog customization!"
+  },
+  {
+    "objectID": "posts/Week-Four/Week-Four.html#project-overview",
+    "href": "posts/Week-Four/Week-Four.html#project-overview",
+    "title": "Week Four",
+    "section": "Project Overview",
+    "text": "Project Overview\nFor our team meeting on Friday, I was tasked with writing the Project Overview section and the following is that information.\nOur group’s task in the 2023 DSPG program is to develop a tool for the Farm, Food and Enterprise Development ISU Extension (FFED) that can help inform decision making for rural grocery stores. The goal of the project is to help users to make better decisions in opening, inheriting, and operating grocery stores in rural environments. The development of the tool relies heavily on the research conducted by domain experts on rural grocery stores and accessibility to verified data on the topic. Our current workflow moving forward is outlined in the following manner.\n\n\n\nWeekly Project Timeline\n\n\nAs we learn more about our data and possibilities for automating processes that our client’s initially calculated manually, we update our vision for what our final deliverable for DSPG could be. A draft of our thoughts are depicted as a tool which takes a certain range of user input and automated data, transforms that data through converted functions, and outputs the results in the most accessible format for the user.\n\n\n\nTool Processes"
   }
 ]
