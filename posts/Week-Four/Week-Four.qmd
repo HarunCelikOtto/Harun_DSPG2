@@ -1,7 +1,7 @@
 ---
 title: "Week Four"
 author: "Harun Celik"
-date: "08-06-2023"
+date: "06-08-2023"
 categories: ["Week Four", "Phase Two"]
 ---
 
@@ -9,7 +9,7 @@ categories: ["Week Four", "Phase Two"]
 
 ### Weekly Mission
 
-For DSPG this week as the Grocery group, the project lead and I discussed that our focus should be on assigning the interns the taskf of copying the functionality of the excel tools that were supplied to us. The decision was based off of the reasoning that once all of the functions were converted into R functions and documented properly, creating an inventory the data required to automate the processes would be a lot easier. For those purposes, I set up an [R package on GitHub](https://github.com/DSPG-2023/Grocery) for our Grocery project called `DSPGGrocery` so that the interns could start writing out functions and documenting them using `Roxygen2`. The goal in the future is to automate the process of documentation for our package as much as possible using `Roxygen2`, `pkgdown` and `vignettes` in R.
+For DSPG this week as the Grocery group, the project lead and I discussed that our focus should be on assigning the interns the task of copying the functionality of the excel tools that were supplied to us. The decision was based off of the reasoning that once all of the functions were converted into R functions and documented properly, creating an inventory the data required to automate the processes would be a lot easier. For those purposes, I set up an [R package on GitHub](https://github.com/DSPG-2023/Grocery) for our Grocery project called `DSPGGrocery` so that the interns could start writing out functions and documenting them using `Roxygen2`. The goal in the future is to automate the process of documentation for our package as much as possible using `Roxygen2`, `pkgdown` and `vignettes` in R.
 
 ### Objectives
 

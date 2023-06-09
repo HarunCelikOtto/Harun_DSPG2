@@ -1,18 +1,37 @@
 ---
 title: "Week One"
 author: "Harun Celik"
-date: "2023-05-31"
-categories: [Week One]
+date: "2023-05-19"
+categories: [Week One, Phase One]
+image: "images/UnderstandingData.PNG"
 ---
 
-# Introduction
+## DSPG Work
 
-This is just a *simple* hello.
+### Weekly Mission
 
-```{r}
-print("This works")
-```
+This week we kicked off the start of DSPG with getting students familiarized with DataCamp and the training that they would have to complete in the coming two weeks. While the interns still had two days until we met in person, the graduate fellows worked on getting a little more familiar with each project and getting acquainted with the project leads. This year we have three projects with Project 0 being one that all undergraduate students and I participate in. I also spent a good portion of this week understanding the larger dynamics of DSPG so that I could assist as the senior graduate fellow.
 
-```{r, eval=FALSE}
-print("This will not print")
-```
+### Objectives
+
+The following goals were established for the first week as students got introduced to DSPG.
+
+-   [x] Organize the Box folder where the Grocery Team data would originally be stored.
+-   [x] Review material submitted by the client to delegate to team members.
+-   [x] Identify the DataCamp Tutorials the students will need.
+-   [x] Experiment with setting up the DSPG Blog.
+-   [x] Brainstorm the software that will serve as the medium for task delegation.
+
+Thinking about the skill level of each member of the group and identifying which training would be most beneficial, I settled on assigning the following to the interns.
+
+![DataCamp Assignments for Grocery Team](images/DataCamp_Assignments.PNG)
+
+### Additional Work
+
+The first week also gave us as graduate fellows an opportunity to also assess our skill sets and to see what kind of training we may need to better assist our team members.
+
+In my *Understanding and Interpreting Data* assessment, I received quite a satisfactory score. ![Understanding and Interpreting Data Report](images/UnderstandingData.PNG)
+
+In my *R Programming* assessment, however I was shocked at how difficult the questions were and that I only landed in the Intermediate section. I guess I need to work a little harder on these areas :)
+
+![R Programming Assessment](images/RProgramming.PNG)

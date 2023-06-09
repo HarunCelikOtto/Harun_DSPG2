@@ -1,18 +1,35 @@
 ---
 title: "Week Two"
 author: "Harun Celik"
-date: "2023-05-31"
-categories: [Week Two]
+date: "2023-05-26"
+categories: [Week Two, Phase One]
+image: "images/CourseraCourses.png"
 ---
 
-# Introduction
+## DSPG Work
 
-This is just a *simple* hello, but we are in week two!
+### Weekly Mission
 
-```{r}
-print("This works")
-```
+Week two was a quick entry into the managerial portion of DSPG Work. After delegating the students their training in DataCamp, I was tasked with setting up general DSPG scheduling like the coffee talk meetings which are short 15 minute presentations from each DSPG member on anything Data Science related. To break the ice, graduate fellows presented the coffee talks for each day of week two giving the interns an idea of what the coffee talks are all about. Beyond the Grocery project related tasks, I wanted to implement a Blog this year for DSPG members to maintain as part of a DSPG E-Portfolio and setting that up took a little bit of time because of all the issues that can go wrong technically!
 
-```{r, eval=FALSE}
-print("This will not print")
-```
+### Objectives
+
+-   [x] Arrange coffee talk list and conduct first coffee talk.
+-   [x] Develop a SWOT analysis of the software deliverable for the Grocery team.
+-   [x] Establish Grocery team's GitHub Projects section to delegate tasks.
+-   [x] Meet with client to cover Project Outline and questions on reports.
+-   [x] Conduct a workshop to set up individual blogs for each DSPG team member.
+
+I chose GitHub Projects as a way for our team to divide up tasks. I chose this because I plan to utilize more GitHub functionality for the project when we build an R Package and ticketing issues seemed like it would help our workflow. Currently, most of the tasks are documentation focused and the team seems to be using the system well.
+
+![GitHub Projects](images/GitHubProjects.PNG)
+
+I also took the time to create a SWOT analysis of some potential software we could be using. The list is not exhaustive and it only encapsulates the first things which came to my mind after meeting with our client. The goal is to expand this list as project development continues.
+
+![Software SWOT](images/SoftwareSWOT.PNG)
+
+### Additional Work
+
+Though I won't be needing it exactly for our project, I've made a simple diagram to help me navigate courses and topics that I would like to explore for my own professional growth and I wanted to share that simple diagram here. The following is a roadmap for exploring some Coursera courses I have an interest in. It was also a way for me to mess around in Canva so I could build illustrations for our project as well.
+
+![Coursera Courses](images/CourseraCourses.png)

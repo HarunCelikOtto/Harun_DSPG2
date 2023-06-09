@@ -1,5 +1,5 @@
 ---
-title: "Harun_DSPG2"
+title: "Harun's Blogs"
 listing:
   contents: posts
   sort: "date desc"

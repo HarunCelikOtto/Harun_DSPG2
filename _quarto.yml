@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Harun_DSPG2"
+  title: "Harun's DSPG Blog"
   navbar:
     right:
       - about.qmd
