@@ -1,0 +1,26 @@
+---
+title: "Week Five"
+author: "Harun Celik"
+date: "06-16-2023"
+categories: ["Week Five", "Phase Three"]
+image: "images/MiroDraft.PNG"
+draft: true
+---
+
+## DSPG Work
+
+### Weekly Mission
+
+Enter Phase Three of project.
+
+### Objectives
+
+-   [ ] Review the function work for any bugs in the [`DSPGGrocery`](https://github.com/DSPG-2023/Grocery) package.
+-   [ ] Complete Miro diagram of function dependencies.
+-   [ ] Set up a meeting with client to discuss the function operations material.
+-   [ ] Investigate software possibilities for deliverable.
+-   [ ] Determine a plan to optimize the functions.
+
+### Additional Work
+
+-   [x] Completed a basic course for C++.
