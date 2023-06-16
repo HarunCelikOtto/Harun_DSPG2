@@ -4,22 +4,21 @@ author: "Harun Celik"
 date: "06-16-2023"
 categories: ["Week Five", "Phase Three"]
 image: "images/MiroDraft.PNG"
-draft: true
 ---
 
 ## DSPG Work
 
 ### Weekly Mission
 
-The undergraduate interns finished writing the functions as R functions and went through the testing for each of them. After testing their functions, the next task that was delegated to them was to fix the Miro flowchart which documented how their functions connected to each other. The following image shows how the first flowchart was drafted.
+The undergraduate interns finished converting the excel functions as R functions and went through the testing for each of them. This also included exploring what packages and tools existed that could aid the work of some of the functions aimed at automating the workflow. After exploring and testing their functions, the next task delegated to them was to fix the Miro flowchart which documented how their functions connected to each other. The following image shows how the first flowchart was drafted.
 
 ![Miro Draft Flowchart](images/MiroDraft.PNG)
 
-Agreeing on the right notation, the students came up with the following version which is much easier to read and was also shared with the client Duane.
+Agreeing on the right notation, the students came up with the following version which is much easier to read and was also shared with the client.
 
 ![Miro Cleaned Flowchart](images/MiroCleaned.png)
 
-The last portion of the flowchart remains to be connected after our meeting with Duane since team members had questions we had about the subject domain. We are also now moving towards phase three of the project which focuses on optimizing the development of the R functions and ultimately a tool.
+The last portion of the flowchart remains to be connected after our meeting with the client since team members just received answers to their questions in a meeting we had with the client. We are also now moving towards phase three of the project which focuses on optimizing the development of the R functions and the development of a tool.
 
 ### Objectives
 
