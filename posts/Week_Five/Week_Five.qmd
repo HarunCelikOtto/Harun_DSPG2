@@ -18,24 +18,24 @@ Agreeing on the right notation, the students came up with the following version 
 
 ![Miro Cleaned Flowchart](images/MiroCleaned.png)
 
-The last portion of the flowchart remains to be connected after our meeting with the client since team members just received answers to their questions in a meeting we had with the client. We are also now moving towards phase three of the project which focuses on optimizing the development of the R functions and the development of a tool.
+The last portion of the flowchart remains to be connected since team members just received answers to their questions about the utility of those functions in the meeting we had with the client. We are also now moving towards phase three of the project which focuses on optimizing the development of the R functions and the development of a tool. The project lead and I are working to design how each of the sections will integrate into a single interface.
 
 ### Objectives
 
 -   [x] Review the function work for any bugs in the [`DSPGGrocery`](https://github.com/DSPG-2023/Grocery) package.
--   [x] Complete Miro diagram of function dependencies.
--   [x] Set up a meeting with client to discuss the function operations material.
+-   [x] Complete the Miro diagram of function dependencies.
+-   [x] Set up a meeting with the client to discuss the function operations material.
 -   [x] Investigate software possibilities for the deliverable.
--   [x] Determine a plan to optimize the R functions.
+-   [x] Determine a plan to optimize the converted R functions.
 
 ### Additional Work
 
--   [x] Completed a basic course for C++.
+-   [x] Continue working through basic courses for C++.
 -   [x] Develop a template for an R Shiny app.
--   [x] Look into using `Javascript` with the R Shiny app.
--   [x] Work on developing functions for grabbing location data from the `Google Places API`.
+-   [x] Learn more about `Javascript` integration with the R Shiny app.
+-   [x] Work on learning the `Google Places API` to create functions.
 
-Below is a test data frame which I've made to test the `Google Places API`. I plan to be uploading the functions to display in the following week's blog.
+Below is a test data frame which I've made to test the `Google Places API`. I plan to be uploading the functions for display in the following week's blog.
 
 ```{r}
 # Testing out an example data frame with DT
@@ -49,4 +49,50 @@ test_cities <- data.frame(cities, lat, lng)
 
 ```{r}
 knitr::kable(test_cities)
+```
+
+The current version of my function that's being used to pull multiple location data is below. The outputs may need to be altered next week to better pipe into other API calls.
+
+```{r, eval=FALSE}
+
+places_multiloc_pull <- function(df, name = NULL, 
+                                 search_string = NULL, 
+                                 keyword = NULL, 
+                                 lat = c(df[,2]),
+                                 lng = df[,3],
+                                 radius = 6500, 
+                                 type = NULL, 
+                                 api_key = Sys.getenv("PLACES_KEY"), 
+                                 place_type = NULL) {
+  
+  result_list <- list()
+  
+  for (i in 1:dim(test_cities)[1]) {
+    
+    start_time <- Sys.time()
+    
+    string <- sprintf("df_%f", i)
+    
+    spring <- noquote(string) 
+    
+    spring <- googleway::google_places(search_string = search_string, 
+                                   name = name, 
+                                   location = c(lat[i], lng[i]), 
+                                   radius = radius, 
+                                   keyword = keyword, 
+                                   key = api_key)
+    
+    
+    Sys.sleep(2)
+    
+    result_list <- append(result_list, list(spring$results))
+    
+    end_time <- Sys.time()
+    total_time <- end_time - start_time
+    print(sprintf("Execution time for iteration %d is %.2f", i, total_time))
+  }
+  
+  return(result_list)
+  
+}
 ```
