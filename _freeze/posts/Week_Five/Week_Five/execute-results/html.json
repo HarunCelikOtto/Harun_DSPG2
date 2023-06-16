@@ -1,0 +1,14 @@
+{
+  "hash": "60ec09d4b4302d3bec026d00e32628bb",
+  "result": {
+    "markdown": "---\ntitle: \"Week Five\"\nauthor: \"Harun Celik\"\ndate: \"06-16-2023\"\ncategories: [\"Week Five\", \"Phase Three\"]\nimage: \"images/MiroDraft.PNG\"\ndraft: true\n---\n\n\n## DSPG Work\n\n### Weekly Mission\n\nThe undergraduate interns finished writing the functions as R functions and went through the testing for each of them. After testing their functions, the next task that was delegated to them was to fix the Miro flowchart which documented how their functions connected to each other. The following image shows how the first flowchart was drafted.\n\n![Miro Draft Flowchart](images/MiroDraft.PNG)\n\nAgreeing on the right notation, the students came up with the following version which is much easier to read and was also shared with the client Duane.\n\n![Miro Cleaned Flowchart](images/MiroCleaned.png)\n\nThe last portion of the flowchart remains to be connected after our meeting with Duane since team members had questions we had about the subject domain. We are also now moving towards phase three of the project which focuses on optimizing the development of the R functions and ultimately a tool.\n\n### Objectives\n\n-   [x] Review the function work for any bugs in the [`DSPGGrocery`](https://github.com/DSPG-2023/Grocery) package.\n-   [x] Complete Miro diagram of function dependencies.\n-   [x] Set up a meeting with client to discuss the function operations material.\n-   [x] Investigate software possibilities for the deliverable.\n-   [x] Determine a plan to optimize the R functions.\n\n### Additional Work\n\n-   [x] Completed a basic course for C++.\n-   [x] Develop a template for an R Shiny app.\n-   [x] Look into using `Javascript` with the R Shiny app.\n-   [x] Work on developing functions for grabbing location data from the `Google Places API`.\n\nBelow is a test data frame which I've made to test the `Google Places API`. I plan to be uploading the functions to display in the following week's blog.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Testing out an example data frame with DT\n\ncities <- c(\"Ames\", \"Des Moines\", \"Waterloo\", \"Chicago\")\nlat <- c(42.034534, 41.619549, 42.499504, 41.881832)\nlng <- c(-93.620369, -93.598022, -92.358665, -87.623177)\n\ntest_cities <- data.frame(cities, lat, lng)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nknitr::kable(test_cities)\n```\n\n::: {.cell-output-display}\n|cities     |      lat|       lng|\n|:----------|--------:|---------:|\n|Ames       | 42.03453| -93.62037|\n|Des Moines | 41.61955| -93.59802|\n|Waterloo   | 42.49950| -92.35867|\n|Chicago    | 41.88183| -87.62318|\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

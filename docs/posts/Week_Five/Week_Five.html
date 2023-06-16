@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -150,23 +184,86 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="dspg-work">DSPG Work</h2>
 <section id="weekly-mission" class="level3">
 <h3 class="anchored" data-anchor-id="weekly-mission">Weekly Mission</h3>
-<p>Enter Phase Three of project.</p>
+<p>The undergraduate interns finished writing the functions as R functions and went through the testing for each of them. After testing their functions, the next task that was delegated to them was to fix the Miro flowchart which documented how their functions connected to each other. The following image shows how the first flowchart was drafted.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/MiroDraft.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Miro Draft Flowchart</figcaption>
+</figure>
+</div>
+<p>Agreeing on the right notation, the students came up with the following version which is much easier to read and was also shared with the client Duane.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/MiroCleaned.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Miro Cleaned Flowchart</figcaption>
+</figure>
+</div>
+<p>The last portion of the flowchart remains to be connected after our meeting with Duane since team members had questions we had about the subject domain. We are also now moving towards phase three of the project which focuses on optimizing the development of the R functions and ultimately a tool.</p>
 </section>
 <section id="objectives" class="level3">
 <h3 class="anchored" data-anchor-id="objectives">Objectives</h3>
 <ul class="task-list">
-<li><input type="checkbox">Review the function work for any bugs in the <a href="https://github.com/DSPG-2023/Grocery"><code>DSPGGrocery</code></a> package.</li>
-<li><input type="checkbox">Complete Miro diagram of function dependencies.</li>
-<li><input type="checkbox">Set up a meeting with client to discuss the function operations material.</li>
-<li><input type="checkbox">Investigate software possibilities for deliverable.</li>
-<li><input type="checkbox">Determine a plan to optimize the functions.</li>
+<li><input type="checkbox" checked="">Review the function work for any bugs in the <a href="https://github.com/DSPG-2023/Grocery"><code>DSPGGrocery</code></a> package.</li>
+<li><input type="checkbox" checked="">Complete Miro diagram of function dependencies.</li>
+<li><input type="checkbox" checked="">Set up a meeting with client to discuss the function operations material.</li>
+<li><input type="checkbox" checked="">Investigate software possibilities for the deliverable.</li>
+<li><input type="checkbox" checked="">Determine a plan to optimize the R functions.</li>
 </ul>
 </section>
 <section id="additional-work" class="level3">
 <h3 class="anchored" data-anchor-id="additional-work">Additional Work</h3>
 <ul class="task-list">
 <li><input type="checkbox" checked="">Completed a basic course for C++.</li>
+<li><input type="checkbox" checked="">Develop a template for an R Shiny app.</li>
+<li><input type="checkbox" checked="">Look into using <code>Javascript</code> with the R Shiny app.</li>
+<li><input type="checkbox" checked="">Work on developing functions for grabbing location data from the <code>Google Places API</code>.</li>
 </ul>
+<p>Below is a test data frame which I’ve made to test the <code>Google Places API</code>. I plan to be uploading the functions to display in the following week’s blog.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Testing out an example data frame with DT</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>cities <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Ames"</span>, <span class="st">"Des Moines"</span>, <span class="st">"Waterloo"</span>, <span class="st">"Chicago"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>lat <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">42.034534</span>, <span class="fl">41.619549</span>, <span class="fl">42.499504</span>, <span class="fl">41.881832</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>lng <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">93.620369</span>, <span class="sc">-</span><span class="fl">93.598022</span>, <span class="sc">-</span><span class="fl">92.358665</span>, <span class="sc">-</span><span class="fl">87.623177</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>test_cities <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(cities, lat, lng)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(test_cities)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">cities</th>
+<th style="text-align: right;">lat</th>
+<th style="text-align: right;">lng</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ames</td>
+<td style="text-align: right;">42.03453</td>
+<td style="text-align: right;">-93.62037</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Des Moines</td>
+<td style="text-align: right;">41.61955</td>
+<td style="text-align: right;">-93.59802</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Waterloo</td>
+<td style="text-align: right;">42.49950</td>
+<td style="text-align: right;">-92.35867</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chicago</td>
+<td style="text-align: right;">41.88183</td>
+<td style="text-align: right;">-87.62318</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 
 
 </section>

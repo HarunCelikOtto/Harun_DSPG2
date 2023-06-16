@@ -11,16 +11,43 @@ draft: true
 
 ### Weekly Mission
 
-Enter Phase Three of project.
+The undergraduate interns finished writing the functions as R functions and went through the testing for each of them. After testing their functions, the next task that was delegated to them was to fix the Miro flowchart which documented how their functions connected to each other. The following image shows how the first flowchart was drafted.
+
+![Miro Draft Flowchart](images/MiroDraft.PNG)
+
+Agreeing on the right notation, the students came up with the following version which is much easier to read and was also shared with the client Duane.
+
+![Miro Cleaned Flowchart](images/MiroCleaned.png)
+
+The last portion of the flowchart remains to be connected after our meeting with Duane since team members had questions we had about the subject domain. We are also now moving towards phase three of the project which focuses on optimizing the development of the R functions and ultimately a tool.
 
 ### Objectives
 
--   [ ] Review the function work for any bugs in the [`DSPGGrocery`](https://github.com/DSPG-2023/Grocery) package.
--   [ ] Complete Miro diagram of function dependencies.
--   [ ] Set up a meeting with client to discuss the function operations material.
--   [ ] Investigate software possibilities for deliverable.
--   [ ] Determine a plan to optimize the functions.
+-   [x] Review the function work for any bugs in the [`DSPGGrocery`](https://github.com/DSPG-2023/Grocery) package.
+-   [x] Complete Miro diagram of function dependencies.
+-   [x] Set up a meeting with client to discuss the function operations material.
+-   [x] Investigate software possibilities for the deliverable.
+-   [x] Determine a plan to optimize the R functions.
 
 ### Additional Work
 
 -   [x] Completed a basic course for C++.
+-   [x] Develop a template for an R Shiny app.
+-   [x] Look into using `Javascript` with the R Shiny app.
+-   [x] Work on developing functions for grabbing location data from the `Google Places API`.
+
+Below is a test data frame which I've made to test the `Google Places API`. I plan to be uploading the functions to display in the following week's blog.
+
+```{r}
+# Testing out an example data frame with DT
+
+cities <- c("Ames", "Des Moines", "Waterloo", "Chicago")
+lat <- c(42.034534, 41.619549, 42.499504, 41.881832)
+lng <- c(-93.620369, -93.598022, -92.358665, -87.623177)
+
+test_cities <- data.frame(cities, lat, lng)
+```
+
+```{r}
+knitr::kable(test_cities)
+```
