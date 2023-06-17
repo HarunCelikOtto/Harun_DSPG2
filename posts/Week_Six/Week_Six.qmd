@@ -1,0 +1,89 @@
+---
+title: "Week Six"
+author: "Harun Celik"
+date: "06-23-2023"
+categories: ["Week Six", "Phase Three"]
+image: "images/ShinyDraft.PNG"
+draft: true
+---
+
+The following is the code to produce the first demo of the Shiny application.
+
+```{r}
+library(shiny)
+library(leaflet)
+library(dplyr)
+library(googleway)
+
+# Define UI for application that draws a histogram
+ui <- fluidPage(
+
+    # Application title
+    titlePanel("Rural Grocery Stores"),
+
+    # Sidebar with a slider input for number of bins 
+    sidebarLayout(
+        sidebarPanel(
+          textInput(inputId = "place_names", 
+                    label = "Type Store", 
+                    value = "dollar"),
+          sliderInput(inputId = "radius_slider", 
+                      label = "Search Radius (in meters)", 
+                      min = 100, 
+                      max = 10000, 
+                      value = 5000, 
+                      step = 100),
+          p(),
+          actionButton(inputId = "recalc", "Calculate Points")
+        ),
+
+        # Show a plot of the generated distribution
+        mainPanel(
+           leafletOutput(outputId = "leaflet_map")
+        )
+    )
+)
+
+# Define server logic required to draw a histogram
+server <- function(input, output) {
+    
+    spatial_results <- NULL
+  
+    output$leaflet_map <- renderLeaflet({
+      leaflet(spatial_results) %>%
+        addProviderTiles(providers$OpenStreetMap) %>%
+        setView(lat = 42.034534, lng =-93.620369, zoom = 10)
+        #addMarkers(lng = spatial_results$lng, lat = spatial_results$lat)
+    })
+    
+    observeEvent(input$leaflet_map_click, {
+      locations <- input$leaflet_map_click
+    })
+    
+    observeEvent(input$recalc, {
+      api_results <- NULL
+      api_results <- google_places(search_string = input$place_names, 
+                                       location = c(42.034534, -93.620369), 
+                                       radius = input$radius_slider, 
+                                       keyword = "store", 
+                                   key = Sys.getenv("PLACES_KEY"))
+      
+      spatial_results <- api_results$results %>% 
+        transmute(name = name, 
+                  lat = geometry$location$lat, 
+                  lng = geometry$location$lng)
+        
+    
+    
+    
+    leafletProxy("leaflet_map") %>%
+      clearMarkers() %>%
+      addMarkers(lng = spatial_results$lng, 
+                 lat = spatial_results$lat,
+                 popup = spatial_results$name)
+    })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+```
