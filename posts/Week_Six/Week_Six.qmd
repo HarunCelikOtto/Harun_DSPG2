@@ -6,10 +6,24 @@ categories: ["Week Six", "Phase Three"]
 image: "images/ShinyDraft.PNG"
 draft: true
 ---
+## DSPG Work
 
-The following is the code to produce the first demo of the Shiny application.
+### Weekly Mission
 
-```{r}
+This week, I prioritized the following tasks to complete.
+
+-   [x] Test the R package functions being chained together.
+-   [x] Work on the RShiny application template.
+
+### Objectives
+
+### Additional Work
+
+The following is a screenshot of the RShiny application and its following is the code used to produce the first that demo.
+
+![RShiny Application Draft](images/ShinyDraft.PNG)
+
+```{r, eval=FALSE}
 library(shiny)
 library(leaflet)
 library(dplyr)
