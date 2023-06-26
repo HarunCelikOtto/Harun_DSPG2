@@ -11,7 +11,91 @@
     "href": "index.html",
     "title": "Harun’s Blogs",
     "section": "",
-    "text": "Week Five\n\n\n\n\n\n\n\nWeek Five\n\n\nPhase Three\n\n\n\n\n\n\n\n\n\n\n\nJun 16, 2023\n\n\nHarun Celik\n\n\n\n\n\n\n  \n\n\n\n\nWeek Four\n\n\n\n\n\n\n\nWeek Four\n\n\nPhase Two\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2023\n\n\nHarun Celik\n\n\n\n\n\n\n  \n\n\n\n\nWeek Three\n\n\n\n\n\n\n\nWeek Four\n\n\nPhase Two\n\n\n\n\n\n\n\n\n\n\n\nJun 2, 2023\n\n\nHarun Celik\n\n\n\n\n\n\n  \n\n\n\n\nWeek Two\n\n\n\n\n\n\n\nWeek Two\n\n\nPhase One\n\n\n\n\n\n\n\n\n\n\n\nMay 26, 2023\n\n\nHarun Celik\n\n\n\n\n\n\n  \n\n\n\n\nWeek One\n\n\n\n\n\n\n\nWeek One\n\n\nPhase One\n\n\n\n\n\n\n\n\n\n\n\nMay 19, 2023\n\n\nHarun Celik\n\n\n\n\n\n\nNo matching items"
+    "text": "DSPG Groceries Technical Overview\n\n\n\n\n\n\n\nMid-DSPG Update\n\n\nPhase Three\n\n\n\n\n\n\n\n\n\n\n\nJun 23, 2023\n\n\nHarun Celik\n\n\n\n\n\n\n  \n\n\n\n\nWeek Five\n\n\n\n\n\n\n\nWeek Five\n\n\nPhase Three\n\n\n\n\n\n\n\n\n\n\n\nJun 16, 2023\n\n\nHarun Celik\n\n\n\n\n\n\n  \n\n\n\n\nWeek Four\n\n\n\n\n\n\n\nWeek Four\n\n\nPhase Two\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2023\n\n\nHarun Celik\n\n\n\n\n\n\n  \n\n\n\n\nWeek Three\n\n\n\n\n\n\n\nWeek Four\n\n\nPhase Two\n\n\n\n\n\n\n\n\n\n\n\nJun 2, 2023\n\n\nHarun Celik\n\n\n\n\n\n\n  \n\n\n\n\nWeek Two\n\n\n\n\n\n\n\nWeek Two\n\n\nPhase One\n\n\n\n\n\n\n\n\n\n\n\nMay 26, 2023\n\n\nHarun Celik\n\n\n\n\n\n\n  \n\n\n\n\nWeek One\n\n\n\n\n\n\n\nWeek One\n\n\nPhase One\n\n\n\n\n\n\n\n\n\n\n\nMay 19, 2023\n\n\nHarun Celik\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#design-choices",
+    "href": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#design-choices",
+    "title": "DSPG Groceries Technical Overview",
+    "section": "Design Choices",
+    "text": "Design Choices\nThe design choice for using R had to do with the software’s open source accessibility as well as the possibility of future integration with different software.\n\n\nAutomation of data.\nInteract dynamically with user input.\nEnvironmental support for packages.\nIntegration with R Shiny applications.\n\nA look at how the calculations work…"
+  },
+  {
+    "objectID": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#loading-the-package",
+    "href": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#loading-the-package",
+    "title": "DSPG Groceries Technical Overview",
+    "section": "Loading The Package",
+    "text": "Loading The Package\n One of the first choices we made was to develop the functions in an R Package environment. This means that once the package is complete, it can be compiled and shared with others through online repositories.\nLoading the package\n# Import the DSPGGrocery Package\nlibrary(DSPGGrocery)\nLoading the Google API  Since the package depends on the Google API, it will also need to be loaded in.\n# Set API Key\ngoogleway::set_key(key = Sys.getenv(\"PLACES_KEY\"))"
+  },
+  {
+    "objectID": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#estimating-market-size",
+    "href": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#estimating-market-size",
+    "title": "DSPG Groceries Technical Overview",
+    "section": "Estimating Market Size",
+    "text": "Estimating Market Size\n# Finds distance to points, assigns them to variables\nnorth_dist &lt;- google_distance(\"42.3053733, -95.0621664\",\"42.373296,-95.1508718\")\neast_dist &lt;- google_distance(\"42.3053733, -95.0621664\", \"42.2669247,-95.0038576\")\nsouth_dist &lt;- google_distance(\"42.3053733, -95.0621664\",\"42.258085,-95.223378\")\nwest_dist &lt;- google_distance(\"42.3053733, -95.0621664\",\"42.3113755,-95.6832781\")\n\n# Makes sample list of cities around Lakeview, calls functions, \n# and assigns them to variables\ncity_list = list(1117,994, 222, 19, 86, 265)\nrural_pop &lt;- Rural_Population(9814, \n                              City_Populations(city_list),\n                              Pct_County(north_val,\n                                         east_val,\n                                         south_val,\n                                         west_val, \n                                         1500*.62137119))\ntown_pop &lt;- City_Populations(city_list)"
+  },
+  {
+    "objectID": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#estimating-revenue",
+    "href": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#estimating-revenue",
+    "title": "DSPG Groceries Technical Overview",
+    "section": "Estimating Revenue",
+    "text": "Estimating Revenue\n# The function takes the values generated from \n# previous calculations and calculates Total Estimated Revenue\nTotal_Estimate_Revenue(county_pop=9752,\n                      towns_pop=City_Populations(city_list),\n                      pct_county=Pct_County(north_val,\n                                            east_val,\n                                            south_val,\n                                            west_val, \n                                            1500*.62137119),\n                      town_list=list(1117,994,222, 19, 86, 265),\n                      metro_list=list(1117),\n                      state_index=89.568)"
+  },
+  {
+    "objectID": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#estimating-expenses",
+    "href": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#estimating-expenses",
+    "title": "DSPG Groceries Technical Overview",
+    "section": "Estimating Expenses",
+    "text": "Estimating Expenses\n# User Inputs\n\nMonthly_Rent &lt;- 3642\nLoan_Amount &lt;- 1500000\nInterest_Rate &lt;- .06\n\nGross_Margin &lt;- Gross_Margin(Total_Estimated_Revenue)\nCost_of_Goods_Sold &lt;- Cost_of_Goods_Sold(Total_Estimated_Revenue)\n\n# Scenario 1 Inputs\n\nParking_Lot_Improvements &lt;- 50000\nShelving_Check_Out_Counters &lt;- 60000\nComputer_Equipment_POS &lt;- 15000\nVehicles &lt;- 12000\nDisplay_Cases &lt;- 15000\nRefrigeration &lt;- 20000\nFreezers &lt;- 20000\nMeat_Cutting_Equipment &lt;- 10000\n\nDepreciation_1 &lt;- Depreciation_1(Building_Remodeling = 900000,\n               Parking_Lot_Improvements = 50000,\n               Shelving_Check_Out_Counters = 60000,\n               Computer_Equipment_POS = 15000,\n               Vehicles = 12000,\n               Display_Cases = 15000,\n               Refrigeration = 20000,\n               Freezers = 20000,\n               Meat_Cutting_Equipment = 10000,\n               Miscellaneous_Assets_1 = 10000,\n               Miscellaneous_Assets_1_Use_Life = 10,\n               Miscellaneous_Assets_2 = 10000,\n               Miscellaneous_Assets_2_Use_Life = 10,\n               Miscellaneous_Assets_3 = 10000,\n               Miscellaneous_Assets_3_Use_Life = 10)"
+  },
+  {
+    "objectID": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#estimating-pre-tax-profit",
+    "href": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#estimating-pre-tax-profit",
+    "title": "DSPG Groceries Technical Overview",
+    "section": "Estimating Pre-Tax Profit",
+    "text": "Estimating Pre-Tax Profit\n# Final Calculations:\n\nExpenses &lt;- Cost_of_Goods_Sold + \n            Employee_Wages + \n            Officer_Compensation + \n            Other_Operating_Expense + \n            Interest_Expense + \n            Annual_Rent + \n            Depreciation_1 \n\nSecondary_Income &lt;- Other_Income + \n                    Interest_Income\n\nPre_Tax_Profit &lt;- Total_Estimated_Revenue + \n                  Secondary_Income - \n                  Expenses\n\nPre_Tax_Profit"
+  },
+  {
+    "objectID": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#function-map---market-size",
+    "href": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#function-map---market-size",
+    "title": "DSPG Groceries Technical Overview",
+    "section": "Function Map - Market Size",
+    "text": "Function Map - Market Size\n\nFunctions Section One"
+  },
+  {
+    "objectID": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#function-map---revenue",
+    "href": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#function-map---revenue",
+    "title": "DSPG Groceries Technical Overview",
+    "section": "Function Map - Revenue",
+    "text": "Function Map - Revenue\n\nFunction Section Two"
+  },
+  {
+    "objectID": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#function---expenses",
+    "href": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#function---expenses",
+    "title": "DSPG Groceries Technical Overview",
+    "section": "Function - Expenses",
+    "text": "Function - Expenses\n\nFunction Section Three"
+  },
+  {
+    "objectID": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#all-functions",
+    "href": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#all-functions",
+    "title": "DSPG Groceries Technical Overview",
+    "section": "All Functions",
+    "text": "All Functions\n\nFull Functions Diagram"
+  },
+  {
+    "objectID": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#still-developing",
+    "href": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#still-developing",
+    "title": "DSPG Groceries Technical Overview",
+    "section": "Still Developing",
+    "text": "Still Developing\nCertain components of the project are still under development and design considerations.\n\n\nMarket size and spatial calculations\nGoogle API limitations\nDebugging in R Shiny is difficult :("
+  },
+  {
+    "objectID": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#r-shiny---demonstration",
+    "href": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#r-shiny---demonstration",
+    "title": "DSPG Groceries Technical Overview",
+    "section": "R Shiny - Demonstration",
+    "text": "R Shiny - Demonstration\n\n\nFlexdashboard Demo"
   },
   {
     "objectID": "posts/Week-Four/Week-Four.html",

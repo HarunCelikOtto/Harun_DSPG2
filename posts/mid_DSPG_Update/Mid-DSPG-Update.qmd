@@ -1,0 +1,178 @@
+---
+title: "DSPG Groceries Technical Overview"
+author: "Harun Celik"
+date: "06-23-2023"
+categories: ["Mid-DSPG Update", "Phase Three"]
+image: "images/ShinyDraft.PNG"
+draft: false
+format: revealjs
+transition: fade
+---
+
+## Design Choices
+
+The design choice for using `R` had to do with the software's open source accessibility as well as the possibility of future integration with different software. 
+
+::: incremental
+- Automation of data.
+- Interact dynamically with user input.
+- Environmental support for packages.
+- Integration with R Shiny applications.
+
+
+A look at how the calculations work...
+:::
+
+## Loading The Package
+
+<small> One of the first choices we made was to develop the functions in an R Package environment.
+This means that once the package is complete, it can be compiled and shared with others through
+online repositories.</small>
+
+Loading the package
+
+``` r
+# Import the DSPGGrocery Package
+library(DSPGGrocery)
+```
+
+Loading the Google API
+<small> Since the package depends on the Google API, it will also need to be loaded in.</small>
+
+``` r
+# Set API Key
+googleway::set_key(key = Sys.getenv("PLACES_KEY"))
+```
+
+## Estimating Market Size
+
+``` r{code-line-numbers="|2|9|10-16"}
+# Finds distance to points, assigns them to variables
+north_dist <- google_distance("42.3053733, -95.0621664","42.373296,-95.1508718")
+east_dist <- google_distance("42.3053733, -95.0621664", "42.2669247,-95.0038576")
+south_dist <- google_distance("42.3053733, -95.0621664","42.258085,-95.223378")
+west_dist <- google_distance("42.3053733, -95.0621664","42.3113755,-95.6832781")
+
+# Makes sample list of cities around Lakeview, calls functions, 
+# and assigns them to variables
+city_list = list(1117,994, 222, 19, 86, 265)
+rural_pop <- Rural_Population(9814, 
+                              City_Populations(city_list),
+                              Pct_County(north_val,
+                                         east_val,
+                                         south_val,
+                                         west_val, 
+                                         1500*.62137119))
+town_pop <- City_Populations(city_list)
+```
+
+## Estimating Revenue
+
+``` r
+# The function takes the values generated from 
+# previous calculations and calculates Total Estimated Revenue
+Total_Estimate_Revenue(county_pop=9752,
+                      towns_pop=City_Populations(city_list),
+                      pct_county=Pct_County(north_val,
+                                            east_val,
+                                            south_val,
+                                            west_val, 
+                                            1500*.62137119),
+                      town_list=list(1117,994,222, 19, 86, 265),
+                      metro_list=list(1117),
+                      state_index=89.568)
+
+```
+
+## Estimating Expenses
+
+```r{code-line-numbers="|3-5|10|12-14|21-23|30|"}
+# User Inputs
+
+Monthly_Rent <- 3642
+Loan_Amount <- 1500000
+Interest_Rate <- .06
+
+Gross_Margin <- Gross_Margin(Total_Estimated_Revenue)
+Cost_of_Goods_Sold <- Cost_of_Goods_Sold(Total_Estimated_Revenue)
+
+# Scenario 1 Inputs
+
+Parking_Lot_Improvements <- 50000
+Shelving_Check_Out_Counters <- 60000
+Computer_Equipment_POS <- 15000
+Vehicles <- 12000
+Display_Cases <- 15000
+Refrigeration <- 20000
+Freezers <- 20000
+Meat_Cutting_Equipment <- 10000
+
+Depreciation_1 <- Depreciation_1(Building_Remodeling = 900000,
+               Parking_Lot_Improvements = 50000,
+               Shelving_Check_Out_Counters = 60000,
+               Computer_Equipment_POS = 15000,
+               Vehicles = 12000,
+               Display_Cases = 15000,
+               Refrigeration = 20000,
+               Freezers = 20000,
+               Meat_Cutting_Equipment = 10000,
+               Miscellaneous_Assets_1 = 10000,
+               Miscellaneous_Assets_1_Use_Life = 10,
+               Miscellaneous_Assets_2 = 10000,
+               Miscellaneous_Assets_2_Use_Life = 10,
+               Miscellaneous_Assets_3 = 10000,
+               Miscellaneous_Assets_3_Use_Life = 10)
+```
+
+## Estimating Pre-Tax Profit
+
+```r{code-line-numbers="|3-9|11-12|14-16|18|"}
+# Final Calculations:
+
+Expenses <- Cost_of_Goods_Sold + 
+            Employee_Wages + 
+            Officer_Compensation + 
+            Other_Operating_Expense + 
+            Interest_Expense + 
+            Annual_Rent + 
+            Depreciation_1 
+
+Secondary_Income <- Other_Income + 
+                    Interest_Income
+
+Pre_Tax_Profit <- Total_Estimated_Revenue + 
+                  Secondary_Income - 
+                  Expenses
+
+Pre_Tax_Profit
+```
+
+## Function Map - Market Size
+
+![Functions Section One](images/MiroOne.PNG)
+
+## Function Map - Revenue
+
+![Function Section Two](images/MiroTwo.PNG)
+
+## Function - Expenses
+
+![Function Section Three](images/MiroThree.PNG)
+
+## All Functions
+
+![Full Functions Diagram](images/MiroAll.PNG)
+
+## Still Developing
+
+Certain components of the project are still under development and design considerations.
+
+::: incremental
+- Market size and spatial calculations
+- Google API limitations
+- Debugging in R Shiny is difficult :(
+:::
+
+## R Shiny - Demonstration
+
+![Flexdashboard Demo](images/flexboarddemo.PNG)
