@@ -3,7 +3,7 @@ title: "DSPG Groceries Technical Overview"
 author: "Harun Celik"
 date: "06-23-2023"
 categories: ["Mid-DSPG Update", "Phase Three"]
-image: "images/ShinyDraft.PNG"
+image: "images/flexboarddemo.PNG"
 draft: false
 format: revealjs
 transition: fade
