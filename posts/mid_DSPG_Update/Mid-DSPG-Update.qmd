@@ -11,23 +11,20 @@ transition: fade
 
 ## Design Choices
 
-The design choice for using `R` had to do with the software's open source accessibility as well as the possibility of future integration with different software. 
+The design choice for using `R` had to do with the software's open source accessibility as well as the possibility of future integration with different software.
 
 ::: incremental
-- Automation of data.
-- Interact dynamically with user input.
-- Environmental support for packages.
-- Integration with R Shiny applications.
-
+-   Automation of data.
+-   Interact dynamically with user input.
+-   Environmental support for packages.
+-   Integration with R Shiny applications.
 
 A look at how the calculations work...
 :::
 
 ## Loading The Package
 
-<small> One of the first choices we made was to develop the functions in an R Package environment.
-This means that once the package is complete, it can be compiled and shared with others through
-online repositories.</small>
+<small> One of the first choices we made was to develop the functions in an R Package environment. This means that once the package is complete, it can be compiled and shared with others through online repositories.</small>
 
 Loading the package
 
@@ -36,8 +33,7 @@ Loading the package
 library(DSPGGrocery)
 ```
 
-Loading the Google API
-<small> Since the package depends on the Google API, it will also need to be loaded in.</small>
+Loading the Google API <small> Since the package depends on the Google API, it will also need to be loaded in.</small>
 
 ``` r
 # Set API Key
@@ -46,7 +42,7 @@ googleway::set_key(key = Sys.getenv("PLACES_KEY"))
 
 ## Estimating Market Size
 
-``` r{code-line-numbers="|2|9|10-16"}
+``` {.r code-line-numbers="|2|9|10-16"}
 # Finds distance to points, assigns them to variables
 north_dist <- google_distance("42.3053733, -95.0621664","42.373296,-95.1508718")
 east_dist <- google_distance("42.3053733, -95.0621664", "42.2669247,-95.0038576")
@@ -81,12 +77,11 @@ Total_Estimate_Revenue(county_pop=9752,
                       town_list=list(1117,994,222, 19, 86, 265),
                       metro_list=list(1117),
                       state_index=89.568)
-
 ```
 
 ## Estimating Expenses
 
-```r{code-line-numbers="|3-5|10|12-14|21-23|30|"}
+``` {.r code-line-numbers="|3-5|10|12-14|21-23|30|"}
 # User Inputs
 
 Monthly_Rent <- 3642
@@ -126,7 +121,7 @@ Depreciation_1 <- Depreciation_1(Building_Remodeling = 900000,
 
 ## Estimating Pre-Tax Profit
 
-```r{code-line-numbers="|3-9|11-12|14-16|18|"}
+``` {.r code-line-numbers="|3-9|11-12|14-16|18|"}
 # Final Calculations:
 
 Expenses <- Cost_of_Goods_Sold + 
@@ -165,12 +160,14 @@ Pre_Tax_Profit
 
 ## Still Developing
 
-Certain components of the project are still under development and design considerations.
+The following components of the project are still under development.
 
 ::: incremental
-- Market size and spatial calculations
-- Google API limitations
-- Debugging in R Shiny is difficult :(
+-   Market size and spatial calculations
+-   Formatting Google API outputs
+-   Integrating R functions with the Shiny application
+-   Connecting census data sources to the functions
+-   Building informative dashboard visualizations
 :::
 
 ## R Shiny - Demonstration

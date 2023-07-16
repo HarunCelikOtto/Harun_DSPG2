@@ -88,7 +88,7 @@
     "href": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#still-developing",
     "title": "DSPG Groceries Technical Overview",
     "section": "Still Developing",
-    "text": "Still Developing\nCertain components of the project are still under development and design considerations.\n\n\nMarket size and spatial calculations\nGoogle API limitations\nDebugging in R Shiny is difficult :("
+    "text": "Still Developing\nThe following components of the project are still under development.\n\n\nMarket size and spatial calculations\nFormatting Google API outputs\nIntegrating R functions with the Shiny application\nConnecting census data sources to the functions\nBuilding informative dashboard visualizations"
   },
   {
     "objectID": "posts/mid_DSPG_Update/Mid-DSPG-Update.html#r-shiny---demonstration",
