@@ -4,8 +4,9 @@ author: "Harun Celik"
 date: "06-23-2023"
 categories: ["Week Six", "Phase Three"]
 image: "images/ShinyDraft.PNG"
-draft: true
+draft: false
 ---
+
 ## DSPG Work
 
 ### Weekly Mission
@@ -13,13 +14,16 @@ draft: true
 This week, I prioritized the following tasks to complete.
 
 -   [x] Test the R package functions being chained together.
--   [x] Work on the RShiny application template.
+-   [x] Work on the R Shiny application template.
+-   [x] Automate the Market Size calculations.
 
 ### Objectives
 
+Since there are only a couple of weeks remaining to complete the calculations and develop the deliverable application, the goal is to set the base for the application so that I can work on adding features in as they get completed by the students in their sections.
+
 ### Additional Work
 
-The following is a screenshot of the RShiny application and its following is the code used to produce the first that demo.
+The following is a screenshot of the R Shiny application and its following is the code used to produce that demo. It's a simple UI for now to just prototype what kind of information we want the final tool to include.
 
 ![RShiny Application Draft](images/ShinyDraft.PNG)
 

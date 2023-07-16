@@ -2,7 +2,7 @@
 title: "Week Three"
 author: "Harun Celik"
 date: "06-02-2023"
-categories: ["Week Four", "Phase Two"]
+categories: ["Week Three", "Phase Two"]
 image: "images/ThemesRanking.jpg"
 ---
 
