@@ -1,0 +1,63 @@
+---
+title: "Final Deliverable"
+author: "Harun Celik"
+date: "07-16-2023"
+categories: ["Final Weeks ", "Phase Four"]
+image: "images/hex-DSPGrocery.png"
+---
+
+## DSPG Work
+
+### Final Week's Missions
+
+The final phase of the DSPG projects always take up a lot of time with little to spare on the side for maintaining things like this blog so this entry is actually written after the end of DSPG. After prototyping the Shiny application in Week Six, I began to experiment with other UI possibilities and decided that for our purposes, a UI built using `shinydashboard` had better utility. The following are screenshots of the tabs that I built for our final presentation. I will also include our final deliverables with links to each of the referenced pieces.
+
+-   [Shiny Tool Repository](https://github.com/HarunCelikOtto/Grocery_ShinyDashboard)
+
+-   [DPSGGrocery Package Page](https://dspg-2023.github.io/Grocery/)
+
+#### Deliverable(s)
+
+##### Shiny Application
+
+The first part of the tool focuses on giving the user information on the tool and the instructions for how to proceed with using it. Each of the variables in the Excel that have gone into this tool are present here with little descriptions. The tool repository can be accessed through this [link](https://github.com/HarunCelikOtto/Grocery_ShinyDashboard).
+
+![Shiny Tool Instructions](images/Shiny-Overview.PNG)
+
+The second part of the tool is the mapping interface, which takes an address and a store type used by the Google API for store location returns. There are two buttons the user clicks, the first for loading the data and second for mapping the data along with a dynamically returned information section about the market size.
+
+![Shiny Tool Mapping Interface](images/Shiny-Map.PNG)
+
+The third tab of the tool is the Profit Estimation section which is where the converted Excel tools are used to help determine a Pre-Tax Profit value. The right side contains value boxes which dynamically change based on user defined inputs across the page.
+
+![Shiny Tool Estimation Interface](images/Shiny-Estimations.PNG)
+
+The remaining tabs of the Shiny application are devoted to providing information about the estimated market area and some general information plotted from information taken about the state of Iowa.
+
+![Shiny Census Plots](images/Shiny-Census.PNG)
+
+![Shiny Census Table](images/Shiny-Table.PNG)
+
+![Shiny SalesGenie Plots](images/Shiny-SalesGenie.PNG)
+
+##### DSGGrocery Package Page
+
+My second objective beyond completing the functions and getting the app running was to make sure that we had our package repository built into a pkgdown page so that documentation could be accessible publicly. The page is complete with additional articles outlining the work of each student in a clear format so I can say that this is also a successful deliverable for the project. The front page looks like the following.
+
+![DSPGGrocery Package Front Page](images/Pkgdown-FrontPage.PNG)
+
+A link to the page can also be found [here](https://dspg-2023.github.io/Grocery/).
+
+### Concluding Remarks
+
+I'm proud of my team members for being great cooperative workers and in helping to build a tool to the capacity that we did. I am also thankful for my project lead for her support in getting our project ideas more clearly organized to execute that vision.
+
+There are additional things the tool could certainly benefit from, including but not limited to;
+
+-   User facing Error outputs.
+-   Better market estimation calculations.
+-   Reduced number of repetitive API calls.
+-   Optimized global and reactive variable loading.
+-   Included session based features.
+
+but for a ten week program that is focused on teaching while building tools simultaneously, my expectations are certainly beyond surpassed! The experience was an amazing one with DSPG once again and I hope to be continuing to support the program in the future at whatever capacity that I can.
